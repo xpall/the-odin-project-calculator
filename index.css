@@ -1,0 +1,93 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+body {
+  padding: 1%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* work-are container */
+
+.main-container {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  border: 2px dotted black;
+  margin: 10px;
+  display: flex;
+}
+
+.calculator-area {
+  /* display: flex; */
+  /* flex-direction: column; */
+  border: 1px solid black;
+  min-height: 600px;
+  min-width: 404px;
+}
+
+.calculator {
+  border: 1px dotted orange;
+  display: flex;
+}
+
+.calculator > #display {
+  display: block;
+  min-height: 2000px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-square {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 3;
+  min-width: 300px;
+}
+
+.number-zero {
+  display: flex;
+  flex-grow: 3;
+}
+
+.number-zero > #zero {
+  min-width: 200px;
+}
+
+.number-zero > #dot {
+  min-width: 100px;
+}
+
+.operators-rightside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.operators-rightside > #plus,
+.operators-rightside > #enter {
+  min-height: 39.6%;
+}
+
+.number-square > button,
+.number-zero > button,
+.operators-rightside > button {
+  min-width: 32.67%;
+  min-height: 100px;
+  margin: 1px;
+}
