@@ -19,6 +19,22 @@ footer {
   flex-wrap: wrap;
 }
 
+/* text above */
+.calculator-top#top-details {
+  text-align: center;
+  font-size: smaller;
+}
+
+.calculator-top#display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 120px;
+  padding: 1%;
+  font-size: 60px;
+  border: 2px solid green;
+}
+
 /* work-are container */
 
 .main-container {
@@ -35,17 +51,12 @@ footer {
   /* flex-direction: column; */
   border: 1px solid black;
   min-height: 600px;
-  min-width: 404px;
+  width: 410px;
 }
 
 .calculator {
   border: 1px dotted orange;
   display: flex;
-}
-
-.calculator > #display {
-  display: block;
-  min-height: 2000px;
 }
 
 .numbers {
@@ -82,7 +93,7 @@ footer {
 .operators-rightside {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .operators-rightside > #plus,
@@ -95,4 +106,8 @@ footer {
   min-width: 100px;
   min-height: 100px;
   margin: 1px;
+}
+
+button {
+  font-size: 15px;
 }
