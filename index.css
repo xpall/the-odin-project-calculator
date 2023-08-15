@@ -49,6 +49,7 @@ footer {
 }
 
 .numbers {
+  width: 306px;
   display: flex;
   flex-direction: column;
 }
@@ -56,17 +57,22 @@ footer {
 .number-square {
   display: flex;
   flex-flow: row wrap;
-  flex-grow: 3;
+  flex-grow: 0;
   min-width: 300px;
+}
+
+.number-square > button {
+  width: 100px;
+  height: 100px;
+  margin: 1px;
 }
 
 .number-zero {
   display: flex;
-  flex-grow: 3;
 }
 
 .number-zero > #zero {
-  min-width: 200px;
+  min-width: 202px;
 }
 
 .number-zero > #dot {
@@ -81,13 +87,12 @@ footer {
 
 .operators-rightside > #plus,
 .operators-rightside > #enter {
-  min-height: 39.6%;
+  min-height: 202px;
 }
 
-.number-square > button,
 .number-zero > button,
 .operators-rightside > button {
-  min-width: 32.67%;
+  min-width: 100px;
   min-height: 100px;
   margin: 1px;
 }
