@@ -7,7 +7,7 @@ let tailNumber = '';
 let headNumber = '';
 let tailOperator = '';
 let headOperator = '';
-dots = 0
+let dots = 0;
 
 // (1) for every numpress, save the digit
 operand.forEach(operand => {
@@ -96,8 +96,8 @@ function getProd(a = 1, b = 1) {
 function getQuotient(a = 1, b = 1) {
   // restriction for zero denominator
   if (a === 0) {
-    alert('Cannot divide by zero.')
-    a = 1
+    alert('Cannot divide by zero.');
+    a = 1;
   }
   quotient = (Math.round((b / a) * 100)) / 100;
   tailNumber = quotient;
