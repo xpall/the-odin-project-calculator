@@ -20,6 +20,7 @@ operand.forEach(operand => {
 // (2) once an operator is pressed,
 operation.forEach(operation => {
   operation.addEventListener('click', e => {
+    // check if 'Clear' is pressed
     if (e['target']['textContent'] === 'Clear') {
       displayNumbers = '';
       tailNumber = '';
@@ -45,60 +46,49 @@ operation.forEach(operation => {
       tailOperator = headOperator;
       headOperator = e['target']['textContent'];
     };
-
+    
     // throw values to correct functions
-    if (tailOperator === '+') {
+    if (tailOperator === '+' && tailNumber != '') {
       getSum(Number(headNumber), Number(tailNumber));
-    } else if (tailOperator === '-') {
+    } else if (tailOperator === '-' && tailNumber != '') {
       getDiff(Number(headNumber), Number(tailNumber));
-    } else if (tailOperator === '*') {
-      console.log(headNumber);
-      console.log(tailNumber)
-      if (Number(headNumber) == '') {
-        headNumber = 1
-      }
-      if (Number(tailNumber) == '') {
-        tailNumber = 1
-      }
+    } else if (tailOperator === '*' && tailNumber != '') {
       getProd(Number(headNumber), Number(tailNumber));
-    } else if (tailOperator === '/') {
-      if (Number(headNumber) == '') {
-        headNumber = 1
-      }
-      if (Number(tailNumber) == '') {
-        tailNumber = 1
-      }      
+    } else if (tailOperator === '/' && tailNumber != '') {
       getQuotient(Number(headNumber), Number(tailNumber));
+    } else {
+      
+      tailNumber = headNumber;
     };
   })
 });
 
-function getSum(a = 0, b = 0) {
+function getSum(a, b = 0) {
   sum = b + a;
   tailNumber = sum;
-  // headNumber = '';
   display.textContent = tailNumber;
 };
 
 function getDiff(a = 0, b = 0) {
   diff = b - a;
   tailNumber = diff;
-  // headNumber = '';
   display.textContent = tailNumber;
 };
 
 function getProd(a = 1, b = 1) {
-  prod = Math.round(((b * a) * 100) / 100);
+  // for decimal places if necessary
+  prod = (Math.round((b * a * 100))) / 100;
   tailNumber = prod;
-  console.log(prod)
-  // headNumber = '';
   display.textContent = tailNumber;
 };
 
 function getQuotient(a = 1, b = 1) {
-  quotient = Math.round(((b / a) * 100) / 100);
-  console.log(quotient)
+  // restriction for zero denominator
+  if (a === 0) {
+    alert('Cannot divide by zero.')
+    a = 1
+  }
+  quotient = (Math.round((b / a) * 100)) / 100;
   tailNumber = quotient;
-  // headNumber = '';
   display.textContent = tailNumber;
 };
