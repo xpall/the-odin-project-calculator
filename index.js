@@ -7,11 +7,21 @@ let tailNumber = '';
 let headNumber = '';
 let tailOperator = '';
 let headOperator = '';
+dots = 0
 
 // (1) for every numpress, save the digit
 operand.forEach(operand => {
   operand.addEventListener('click', e => {
     numKey = e['target']['textContent'];
+    console.log(numKey)
+    // decimal point checker
+    if (e['target']['textContent'] === '.') {
+      dots += 1;
+    }
+    if (e['target']['textContent'] === '.' && dots > 1) {
+      alert('Can\'t put multiple decimal points');
+      numKey = ''
+    };
     displayNumbers += numKey;
     display.textContent = displayNumbers;
   })
@@ -20,6 +30,8 @@ operand.forEach(operand => {
 // (2) once an operator is pressed,
 operation.forEach(operation => {
   operation.addEventListener('click', e => {
+    // reset decimal count
+    dots = 0;
     // check if 'Clear' is pressed
     if (e['target']['textContent'] === 'Clear') {
       displayNumbers = '';
