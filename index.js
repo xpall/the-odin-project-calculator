@@ -57,7 +57,6 @@ operation.forEach(operation => {
     } else if (tailOperator === '/' && tailNumber != '') {
       getQuotient(Number(headNumber), Number(tailNumber));
     } else {
-      
       tailNumber = headNumber;
     };
   })
