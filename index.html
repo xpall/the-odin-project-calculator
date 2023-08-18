@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css">
-  <script></script>
+  <script src="index.js" defer></script>
   <title>Calculator</title>
 </head>
 <body>
@@ -19,28 +19,28 @@
       <div class="calculator" id="buttons">
         <div class="numbers">
           <div class="number-square">
-            <button id="clear">Clear</button>
-            <button id="divide">/</button>
-            <button id="multiply">*</button>
-            <button id="seven">7</button>
-            <button id="eight">8</button>
-            <button id="nine">9</button>
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
+            <button class="operation" id="clear">Clear</button>
+            <button class="operation" id="divide">/</button>
+            <button class="operation" id="multiply">*</button>
+            <button class="operand" id="seven">7</button>
+            <button class="operand" id="eight">8</button>
+            <button class="operand" id="nine">9</button>
+            <button class="operand" id="four">4</button>
+            <button class="operand" id="five">5</button>
+            <button class="operand" id="six">6</button>
+            <button class="operand" id="one">1</button>
+            <button class="operand" id="two">2</button>
+            <button class="operand" id="three">3</button>
           </div>
           <div class="number-zero">
-            <button id="zero">0</button>
-            <button id="dot">.</button>
+            <button class="operand" id="zero">0</button>
+            <button class="operand" id="dot">.</button>
           </div>
         </div>
         <div class="operators-rightside">
-          <button>-</button> 
-          <button id="plus">+</button> 
-          <button id="enter">&#x23CE;</button> 
+          <button class="operation" id="minus">-</button> 
+          <button class="operation" id="plus">+</button> 
+          <button class="operation" id="enter">&#x23CE;</button> 
         </div>
       </div>
     </div>
